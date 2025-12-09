@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    font-family: "Momo Trust Display", sans-serif;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#site-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#site-logo {
+    transition: 0.3s ease;
+    width: 90px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#visit-section {
+    margin-top: 8px;
+    width: 280px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#country-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+}
+
+#country-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.footer {
+    background: #0055ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: yellow;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #site-title a {
+        font-size: 2rem;
+    }
+
+    #site-logo {
+        width: 100px;
+    }
+
+    #visit-section {
+        margin-left: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    #site-title a {
+        font-size: 1.7rem;
+    }
+
+    #site-logo {
+        width: 80px;
+    }
+}
+
+/* Content */
+#main-content {
+    margin-top: 0; /* reduced from 140px */
+    padding: 20px 40px;
+    color: #0b090a;
+}
+
+/* Responsive top margin for mobile */
+@media (max-width: 600px) {
+    #main-content {
+        margin-top: 30px;
+    }
+}
+
+/* Title */
+.top-places {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font: bold 100px sans-serif;
+    color: rgb(3, 57, 23);
+}
+
+/* Places grid */
+.places-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Each item */
+.places-n {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+}
+
+/* Images */
+.place-img {
+    width: 500px;
+    height: 500px;
+    border-radius: 8px;
+}
+
+/* Link states */
+.places-n a:visited {
+    color: rgb(3, 57, 23);
+}
+
+.places-n a:hover {
+    color: orangered;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+
+    .places-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .place-img {
+        width: 300px;
+        height: auto;
+        max-width: 250px;
+        border-radius: 10px;
+    }
+
+    .top-places {
+        font-size: 50px;
+    }
+}
+
+/* Main layout (image + text side-by-side) */
+.main-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+/* Image box */
+.image-box img {
+    border-radius: 8px;
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+}
+
+/* Text box */
+.text-box {
+    max-width: 700px;
+}
+
+.text-box h1 {
+    border-top: 5px outset rgb(2, 3, 10);
+    border-left: 5px outset rgb(2, 3, 10);
+    border-radius: 1rem;
+    margin-top: 30px;
+}
+.text-box p{
+text-align: justify;
+font-size: 1rem;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+
+    .main-section {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .image-box img {
+        display: block;
+        margin: 2px auto 0 auto;
+        width: 320px;
+        height: auto;
+    }
+
+    .text-box {
+        text-align: left;
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+}
